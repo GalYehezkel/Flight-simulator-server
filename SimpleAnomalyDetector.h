@@ -10,11 +10,13 @@
 #include <string.h>
 #include <math.h>
 
+
 struct correlatedFeatures{
 	string feature1,feature2;  // names of the correlated features
 	float corrlation;
 	Line lin_reg;
 	float threshold;
+	
 };
 
 
@@ -30,6 +32,7 @@ public:
 	vector<correlatedFeatures> getNormalModel(){
 		return cf;
 	}
+	correlatedFeatures findCorrolation(string feature);
 
 };
 
