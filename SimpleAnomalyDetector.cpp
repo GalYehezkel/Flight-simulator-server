@@ -15,9 +15,9 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 	vector<string> names = ts.getNames();
 	for(int i = 0; i<names.size(); i++) {
 		float corrlation = 0;
-		string corralationWith = nullptr;
+		string corralationWith;
 		int sizeOfVector = ts.getCol(names[i]).size();
-		for(int j = i + 1; i<names.size(); i++) {
+		for(int j = i + 1; j<names.size(); j++) {
 			float tempcorrlation = pearson(&ts.getCol(names[i])[0], &ts.getCol(names[j])[0], sizeOfVector);
 			if(tempcorrlation > corrlation) {
 				corrlation = tempcorrlation;
@@ -48,15 +48,14 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 		}
 	}
 
-
 }
-correlatedFeatures SimpleAnomalyDetector::findCorrolation(string feature) {
+correlatedFeatures* SimpleAnomalyDetector::findCorrolation(string feature) {
 	for(int i = 0; i < cf.size(); i++) {
 		if(cf[i].feature1 == feature || cf[i].feature2 == feature) {
-			return cf[i];
+			return &cf[i];
 		}
 	}
-	return;
+	return nullptr; //won't get here.
 }
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
 	vector<AnomalyReport> anomalyReport;
@@ -64,19 +63,12 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
 	int numOfRows = ts.getNumOfRows();
 	for(int i = 0; i<numOfRows; i++) {
 		for(int j = 0; j < names.size(); j++) {
-			correlatedFeatures c = findCorrolation(names[j]);
+			correlatedFeatures c = *findCorrolation(names[j]);
 			string f1,f2;
-			if(c.feature1 == names[j]) {
-				f1 = c.feature1;
-				f2 = c.feature2;
-			} else {
-				f1 = c.feature2;
-				f2 = c.feature1;
-			}
-			Point p(ts.valueOfJinI(i,f1), ts.valueOfJinI(i,f2));
-			if(dev(p, c.lin_reg) > c.threshold) {
-				string desc = f1 + '-' + f2;
-				anomalyReport.push_back(AnomalyReport(desc, ts.valueOfJinI(i, 0)));
+			Point p(ts.valueOfJinI(i,c.feature1), ts.valueOfJinI(i,c.feature2));
+			if(dev(p, c.lin_reg) > c.threshold * 1.15) {
+				string desc = c.feature1 + '-' + c.feature2;
+				anomalyReport.push_back(AnomalyReport(desc, ts.valueOfJinI(i, names[0])));
 				break;
 			}
 		}	

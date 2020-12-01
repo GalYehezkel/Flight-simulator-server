@@ -8,8 +8,7 @@ TimeSeries::TimeSeries(const char* CSVfileName) {
         getline(myFile, line);
         stringstream ss(line);
         while(getline(ss,colname, ',')) {
-            table.insert(pair<string, vector<float>>(colname, vector<float> {})
-            );
+            table.insert(pair<string, vector<float>>(colname, vector<float> {}));
             names.push_back(colname);
         }
     }
@@ -29,7 +28,7 @@ vector<string> TimeSeries::getNames() const {
     return names;
 }
 vector<float> TimeSeries::getCol(string name) const {
-    table.at(name);
+    return table.at(name);
 }
 int TimeSeries::getNumOfRows() const {
     return getCol(names[0]).size();

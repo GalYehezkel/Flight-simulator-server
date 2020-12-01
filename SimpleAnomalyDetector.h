@@ -32,7 +32,7 @@ public:
 	vector<correlatedFeatures> getNormalModel(){
 		return cf;
 	}
-	correlatedFeatures findCorrolation(string feature);
+	correlatedFeatures* findCorrolation(string feature);
 
 };
 
