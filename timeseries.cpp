@@ -1,3 +1,5 @@
+// Gal Yehezkel, ID: 315786228
+
 #include "timeseries.h"
 // fills map<string, vector<float>> table from the csv file.
 TimeSeries::TimeSeries(const char* CSVfileName) {

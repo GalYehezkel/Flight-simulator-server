@@ -18,6 +18,7 @@ struct correlatedFeatures{
 	float threshold;
 	
 };
+// Gal Yehezkel, ID: 315786228
 
 
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{

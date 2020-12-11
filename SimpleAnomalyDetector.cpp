@@ -1,4 +1,4 @@
-
+// Gal Yehezkel, ID: 315786228
 #include "SimpleAnomalyDetector.h"
 
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
