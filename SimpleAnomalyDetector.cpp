@@ -66,7 +66,7 @@ vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
 			correlatedFeatures c = *findCorrolation(names[j]);
 			string f1,f2;
 			Point p(ts.valueOfJinI(i,c.feature1), ts.valueOfJinI(i,c.feature2));
-			if(dev(p, c.lin_reg) > c.threshold * 1.15) {
+			if(dev(p, c.lin_reg) > c.threshold * 1.2) {
 				string desc = c.feature1 + '-' + c.feature2;
 				anomalyReport.push_back(AnomalyReport(desc, ts.valueOfJinI(i, names[0])));
 				break;
