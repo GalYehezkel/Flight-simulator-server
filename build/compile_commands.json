@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/MainTrain.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp",
+  "file": "/mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/anomaly_detection_util.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.cpp",
+  "file": "/mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/SimpleAnomalyDetector.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.cpp",
+  "file": "/mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/timeseries.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/timeseries.cpp",
+  "file": "/mnt/c/Users/Gal/Desktop/even2/even2/timeseries.cpp"
+}
+]

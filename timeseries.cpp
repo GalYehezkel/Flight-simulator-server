@@ -1,6 +1,7 @@
 // Gal Yehezkel, ID: 315786228
 
 #include "timeseries.h"
+#include <iostream>
 // fills map<string, vector<float>> table from the csv file.
 TimeSeries::TimeSeries(const char* CSVfileName) {
     ifstream myFile(CSVfileName);
@@ -12,6 +13,7 @@ TimeSeries::TimeSeries(const char* CSVfileName) {
         while(getline(ss,colname, ',')) {
             table.insert(pair<string, vector<float>>(colname, vector<float> {}));
             names.push_back(colname);
+            //std::cout<<colname << endl;
         }
     }
     while(getline(myFile, line)) {
@@ -25,6 +27,18 @@ TimeSeries::TimeSeries(const char* CSVfileName) {
         }
     }
     myFile.close();
+}
+void TimeSeries::printTable() {
+    for(int i = 0; i < names.size(); i++) {
+        cout<< names[i] << " ";
+    }
+    std::cout<<endl;
+    for(int i =0; i < table[names[0]].size(); i++) {
+        for(int j = 0; j < names.size(); j++) {
+            std::cout<<table[names[j]][i] << " ";
+        }
+        std::cout<<endl;
+    }
 }
 vector<string> TimeSeries::getNames() const {
     return names;

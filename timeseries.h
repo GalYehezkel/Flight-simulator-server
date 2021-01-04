@@ -18,6 +18,7 @@ public:
 	vector<float> getCol(string name) const;
 	float valueOfJinI(int row, string name) const;
 	int getNumOfRows() const;
+	void printTable();
 };
 
 
