@@ -5,6 +5,7 @@
 
 #include "anomaly_detection_util.h"
 #include "AnomalyDetector.h"
+#include "minCircle.h"
 #include <vector>
 #include <algorithm>
 #include <string.h>
@@ -16,6 +17,8 @@ struct correlatedFeatures{
 	float corrlation;
 	Line lin_reg;
 	float threshold;
+	bool isSimple = true;
+	Circle c();
 	
 };
 // Gal Yehezkel, ID: 315786228
@@ -26,7 +29,7 @@ class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
 public:
 	SimpleAnomalyDetector();
 	virtual ~SimpleAnomalyDetector();
-
+	void check(const TimeSeries& ts, int sizeOfVector, vector<string> names, string corralationWith, float corrlation, int i, float c);
 	virtual void learnNormal(const TimeSeries& ts);
 	virtual vector<AnomalyReport> detect(const TimeSeries& ts);
 
