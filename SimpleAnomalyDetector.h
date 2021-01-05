@@ -1,3 +1,4 @@
+// Gal Yehezkel, ID: 315786228
 
 
 #ifndef SIMPLEANOMALYDETECTOR_H_
@@ -18,10 +19,9 @@ struct correlatedFeatures{
 	Line lin_reg;
 	float threshold;
 	bool isSimple = true;
-	Circle c();
+	Circle c;
 	
 };
-// Gal Yehezkel, ID: 315786228
 
 
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
@@ -29,10 +29,11 @@ class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
 public:
 	SimpleAnomalyDetector();
 	virtual ~SimpleAnomalyDetector();
-	void check(const TimeSeries& ts, int sizeOfVector, vector<string> names, string corralationWith, float corrlation, int i, float c);
+	virtual void check(const TimeSeries& ts, int sizeOfVector, vector<string> names, string corralationWith, float corrlation, int i, float c);
 	virtual void learnNormal(const TimeSeries& ts);
 	virtual vector<AnomalyReport> detect(const TimeSeries& ts);
-
+	void pushToVector(correlatedFeatures insertCf);
+	virtual void detectCheck(vector<AnomalyReport>* anomalyReport, Point p, correlatedFeatures cfi, int j);
 	vector<correlatedFeatures> getNormalModel(){
 		return cf;
 	}

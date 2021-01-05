@@ -36,6 +36,7 @@ public:
 	Point center;
 	float radius;
 	Circle(Point c,float r):center(c),radius(r){}
+	Circle():center({0 , 0}),radius(0){};
 };
 // --------------------------------------
   

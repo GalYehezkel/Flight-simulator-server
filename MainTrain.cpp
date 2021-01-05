@@ -1,7 +1,7 @@
 /*
  * MainTrain.cpp
  *
- *  Created on: 11 баечЧ 2020
+ *  Created on: 11 пїЅпїЅпїЅпїЅпїЅ 2020
  *      Author: Eli
  */
 

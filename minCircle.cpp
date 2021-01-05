@@ -1,3 +1,5 @@
+// 31578622	31601262
+// Gal Yehezkel, ID: 315786228
 #include "minCircle.h"
 #include <iostream>
 #include <math.h>
