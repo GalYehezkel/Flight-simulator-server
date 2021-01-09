@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/even2.dir/CLI.cpp.o"
   "CMakeFiles/even2.dir/HybridAnomalyDetector.cpp.o"
   "CMakeFiles/even2.dir/MainTrain.cpp.o"
   "CMakeFiles/even2.dir/SimpleAnomalyDetector.cpp.o"

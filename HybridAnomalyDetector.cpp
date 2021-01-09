@@ -22,7 +22,7 @@ void HybridAnomalyDetector::detectCheck(vector<AnomalyReport>* anomalyReport, Po
 }
 void HybridAnomalyDetector::check(const TimeSeries& ts, int sizeOfVector, vector<string> names, string corralationWith, float corrlation, int i, float c) {
 		//simple check.
-		SimpleAnomalyDetector::check(ts, sizeOfVector, names,  corralationWith, corrlation, i, 0.9);
+		SimpleAnomalyDetector::check(ts, sizeOfVector, names,  corralationWith, corrlation, i, c);
 		if(corrlation > 0.5 && corrlation < c) { //if should look for mincircle.
 			Point *pi[sizeOfVector];
 			for(int k = 0; k < sizeOfVector; k++) {

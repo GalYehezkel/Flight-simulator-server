@@ -16,9 +16,15 @@ timeseries.h
 math.h
 /mnt/c/Users/Gal/Desktop/even2/even2/math.h
 
-/mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.cpp
-HybridAnomalyDetector.h
-/mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
+/mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp
+CLI.h
+/mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
+
+/mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
+string.h
+-
+commands.h
+/mnt/c/Users/Gal/Desktop/even2/even2/commands.h
 
 /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
 SimpleAnomalyDetector.h
@@ -29,26 +35,12 @@ minCircle.h
 /mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp
 iostream
 -
-vector
--
-HybridAnomalyDetector.h
-/mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
 fstream
 -
-stdlib.h
--
-time.h
--
-math.h
--
-
-/mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.cpp
-SimpleAnomalyDetector.h
-/mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.h
-iostream
--
-math.h
--
+commands.h
+/mnt/c/Users/Gal/Desktop/even2/even2/commands.h
+CLI.h
+/mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
 
 /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.h
 anomaly_detection_util.h
@@ -67,6 +59,18 @@ math.h
 -
 
 /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.h
+
+/mnt/c/Users/Gal/Desktop/even2/even2/commands.h
+iostream
+-
+string.h
+-
+fstream
+-
+vector
+-
+HybridAnomalyDetector.h
+/mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
 
 /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.h
 iostream

@@ -28,5 +28,10 @@
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
   "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/HybridAnomalyDetector.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
+  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/CLI.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp",
+  "file": "/mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp"
 }
 ]

@@ -5,7 +5,7 @@
 
 SimpleAnomalyDetector::SimpleAnomalyDetector() {
 	// TODO Auto-generated constructor stub
-
+	thresholdP = 0.9;
 }
 
 SimpleAnomalyDetector::~SimpleAnomalyDetector() {
@@ -54,7 +54,7 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 				corralationWith = names[j];
 			}
 		}
-		check(ts, sizeOfVector, names,  corralationWith, corrlation, i, 0.9);
+		check(ts, sizeOfVector, names,  corralationWith, corrlation, i, thresholdP);
 /*	if(corrlation >= 0.9) {
 			Point *pi[sizeOfVector];
 			for(int k = 0; k < sizeOfVector; k++) {
@@ -87,8 +87,19 @@ void SimpleAnomalyDetector::learnNormal(const TimeSeries& ts){
 		anomalyReport->push_back(AnomalyReport(desc, j + 1));
 	}
  }
+ void SimpleAnomalyDetector::setThreshold(float ths) {
+	 thresholdP = ths;
+ }
+float SimpleAnomalyDetector::getThreshold() {
+	return thresholdP;
+}
+int SimpleAnomalyDetector::getInputSize() {
+	return n;
+}
+
 vector<AnomalyReport> SimpleAnomalyDetector::detect(const TimeSeries& ts){
 	vector<AnomalyReport> anomalyReport;
+	n = ts.getCol(cf[0].feature1).size();
 	for(int i = 0; i < cf.size(); i++) {
 		vector<float> f1 = ts.getCol(cf[i].feature1);
 		vector<float> f2 = ts.getCol(cf[i].feature2);

@@ -26,9 +26,12 @@ struct correlatedFeatures{
 
 class SimpleAnomalyDetector:public TimeSeriesAnomalyDetector{
 	vector<correlatedFeatures> cf;
+	float thresholdP;
+	int n;
 public:
 	SimpleAnomalyDetector();
 	virtual ~SimpleAnomalyDetector();
+	int getInputSize();
 	virtual void check(const TimeSeries& ts, int sizeOfVector, vector<string> names, string corralationWith, float corrlation, int i, float c);
 	virtual void learnNormal(const TimeSeries& ts);
 	virtual vector<AnomalyReport> detect(const TimeSeries& ts);
@@ -37,6 +40,9 @@ public:
 	vector<correlatedFeatures> getNormalModel(){
 		return cf;
 	}
+	void setThreshold(float ths);
+	float getThreshold();
+
 };
 
 
