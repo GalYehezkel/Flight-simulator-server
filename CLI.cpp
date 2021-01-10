@@ -1,3 +1,5 @@
+// Gal Yehezkel, ID: 315786228
+
 #include "CLI.h"
 
 CLI::CLI(DefaultIO* dio){
@@ -24,7 +26,6 @@ void CLI::start(){
         stringstream ss(option);
         ss >> opp;
         v[opp -1]->execute();
-        std::cout << opp;
     }
 }
 

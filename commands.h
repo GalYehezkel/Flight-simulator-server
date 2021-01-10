@@ -1,4 +1,5 @@
 
+// Gal Yehezkel, ID: 315786228
 
 #ifndef COMMANDS_H_
 #define COMMANDS_H_
@@ -177,20 +178,20 @@ class UploadAnom:public Command {
 		bool flag = false;
 		dio->write("Please upload your local anomalies file.\n");
 		float start, end;
-		string line = dio->read();
-		stringstream ss(line);
-		P++;
 		vector<Range> input;
+		string line, a, b;
+		char* x, y;
 		string done = "done";
-		while(line.compare(done) != 0) {
-			stringstream ss(line);
-			ss >> start;
-			ss.ignore();
-			ss >> end;
-			temp.start = start;
-			temp.end = end;
+		while((line = dio->read()) != "done") {
+			int d = 0;
+			while(line[d] != ',') {
+				d++;
+			}
+			a = line.substr(0, d);
+			b = line.substr(d + 1, line.length() - d);
+			temp.start = atoi(a.c_str());
+			temp.end = atoi(b.c_str());
 			input.push_back(temp);
-			line = dio->read();
 		}
 		sort(input.begin(), input.end(), comprator);
 		int size2 = input.size();
@@ -223,7 +224,6 @@ class UploadAnom:public Command {
 			k++;
 			P++;
 		}
-		P--; //for done.
 		FP += (size - index);
 		dio->write("Upload complete.\n");
 		float trueRate =  (TP / P) * 1000;

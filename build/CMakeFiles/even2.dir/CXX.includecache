@@ -32,16 +32,6 @@ SimpleAnomalyDetector.h
 minCircle.h
 /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.h
 
-/mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp
-iostream
--
-fstream
--
-commands.h
-/mnt/c/Users/Gal/Desktop/even2/even2/commands.h
-CLI.h
-/mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
-
 /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.h
 anomaly_detection_util.h
 /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.h
