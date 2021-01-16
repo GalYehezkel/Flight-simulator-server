@@ -1,37 +1,42 @@
 [
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/MainTrain.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/MainTrain.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp"
 },
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/anomaly_detection_util.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/anomaly_detection_util.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.cpp"
 },
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/SimpleAnomalyDetector.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/SimpleAnomalyDetector.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.cpp"
 },
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/timeseries.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/timeseries.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/timeseries.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/timeseries.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/timeseries.cpp"
 },
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/minCircle.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/minCircle.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/minCircle.cpp"
 },
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/HybridAnomalyDetector.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/HybridAnomalyDetector.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.cpp"
 },
 {
   "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
-  "command": "/bin/g++-9    -g   -o CMakeFiles/even2.dir/CLI.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/CLI.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp",
   "file": "/mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp"
+},
+{
+  "directory": "/mnt/c/Users/Gal/Desktop/even2/even2/build",
+  "command": "/bin/g++-9     -pthread -std=c++11 -g   -o CMakeFiles/even2.dir/server.cpp.o -c /mnt/c/Users/Gal/Desktop/even2/even2/server.cpp",
+  "file": "/mnt/c/Users/Gal/Desktop/even2/even2/server.cpp"
 }
 ]

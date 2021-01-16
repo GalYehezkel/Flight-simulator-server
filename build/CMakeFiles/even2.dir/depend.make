@@ -23,6 +23,7 @@ CMakeFiles/even2.dir/MainTrain.cpp.o: ../AnomalyDetector.h
 CMakeFiles/even2.dir/MainTrain.cpp.o: ../CLI.h
 CMakeFiles/even2.dir/MainTrain.cpp.o: ../HybridAnomalyDetector.h
 CMakeFiles/even2.dir/MainTrain.cpp.o: ../MainTrain.cpp
+CMakeFiles/even2.dir/MainTrain.cpp.o: ../Server.h
 CMakeFiles/even2.dir/MainTrain.cpp.o: ../SimpleAnomalyDetector.h
 CMakeFiles/even2.dir/MainTrain.cpp.o: ../anomaly_detection_util.h
 CMakeFiles/even2.dir/MainTrain.cpp.o: ../commands.h
@@ -42,6 +43,17 @@ CMakeFiles/even2.dir/anomaly_detection_util.cpp.o: ../anomaly_detection_util.h
 CMakeFiles/even2.dir/minCircle.cpp.o: ../anomaly_detection_util.h
 CMakeFiles/even2.dir/minCircle.cpp.o: ../minCircle.cpp
 CMakeFiles/even2.dir/minCircle.cpp.o: ../minCircle.h
+
+CMakeFiles/even2.dir/server.cpp.o: ../AnomalyDetector.h
+CMakeFiles/even2.dir/server.cpp.o: ../CLI.h
+CMakeFiles/even2.dir/server.cpp.o: ../HybridAnomalyDetector.h
+CMakeFiles/even2.dir/server.cpp.o: ../Server.h
+CMakeFiles/even2.dir/server.cpp.o: ../SimpleAnomalyDetector.h
+CMakeFiles/even2.dir/server.cpp.o: ../anomaly_detection_util.h
+CMakeFiles/even2.dir/server.cpp.o: ../commands.h
+CMakeFiles/even2.dir/server.cpp.o: ../minCircle.h
+CMakeFiles/even2.dir/server.cpp.o: ../server.cpp
+CMakeFiles/even2.dir/server.cpp.o: ../timeseries.h
 
 CMakeFiles/even2.dir/timeseries.cpp.o: ../timeseries.cpp
 CMakeFiles/even2.dir/timeseries.cpp.o: ../timeseries.h

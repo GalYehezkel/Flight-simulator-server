@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/even2.dir/SimpleAnomalyDetector.cpp.o"
   "CMakeFiles/even2.dir/anomaly_detection_util.cpp.o"
   "CMakeFiles/even2.dir/minCircle.cpp.o"
+  "CMakeFiles/even2.dir/server.cpp.o"
   "CMakeFiles/even2.dir/timeseries.cpp.o"
   "even2"
   "even2.pdb"

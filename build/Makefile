@@ -682,6 +682,33 @@ minCircle.cpp.s:
 	$(MAKE) -f CMakeFiles/even2.dir/build.make CMakeFiles/even2.dir/minCircle.cpp.s
 .PHONY : minCircle.cpp.s
 
+server.o: server.cpp.o
+
+.PHONY : server.o
+
+# target to build an object file
+server.cpp.o:
+	$(MAKE) -f CMakeFiles/even2.dir/build.make CMakeFiles/even2.dir/server.cpp.o
+.PHONY : server.cpp.o
+
+server.i: server.cpp.i
+
+.PHONY : server.i
+
+# target to preprocess a source file
+server.cpp.i:
+	$(MAKE) -f CMakeFiles/even2.dir/build.make CMakeFiles/even2.dir/server.cpp.i
+.PHONY : server.cpp.i
+
+server.s: server.cpp.s
+
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.cpp.s:
+	$(MAKE) -f CMakeFiles/even2.dir/build.make CMakeFiles/even2.dir/server.cpp.s
+.PHONY : server.cpp.s
+
 timeseries.o: timeseries.cpp.o
 
 .PHONY : timeseries.o
@@ -767,6 +794,9 @@ help:
 	@echo "... minCircle.o"
 	@echo "... minCircle.i"
 	@echo "... minCircle.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 	@echo "... timeseries.o"
 	@echo "... timeseries.i"
 	@echo "... timeseries.s"

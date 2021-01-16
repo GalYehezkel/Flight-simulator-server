@@ -3,6 +3,7 @@
     "files.associations": {
         "iosfwd": "cpp",
         "ostream": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "thread": "cpp"
     }
 }

@@ -24,6 +24,7 @@ CMakeFiles/even2.dir/MainTrain.cpp.o
  /mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
  /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
  /mnt/c/Users/Gal/Desktop/even2/even2/MainTrain.cpp
+ /mnt/c/Users/Gal/Desktop/even2/even2/Server.h
  /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.h
  /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.h
  /mnt/c/Users/Gal/Desktop/even2/even2/commands.h
@@ -43,6 +44,17 @@ CMakeFiles/even2.dir/minCircle.cpp.o
  /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.h
  /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.cpp
  /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.h
+CMakeFiles/even2.dir/server.cpp.o
+ /mnt/c/Users/Gal/Desktop/even2/even2/AnomalyDetector.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/Server.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/SimpleAnomalyDetector.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/anomaly_detection_util.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/commands.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.h
+ /mnt/c/Users/Gal/Desktop/even2/even2/server.cpp
+ /mnt/c/Users/Gal/Desktop/even2/even2/timeseries.h
 CMakeFiles/even2.dir/timeseries.cpp.o
  /mnt/c/Users/Gal/Desktop/even2/even2/timeseries.cpp
  /mnt/c/Users/Gal/Desktop/even2/even2/timeseries.h

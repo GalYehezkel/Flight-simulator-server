@@ -6,11 +6,26 @@
 
 #include<iostream>
 #include <string.h>
-
 #include <fstream>
 #include <vector>
 #include "HybridAnomalyDetector.h"
-
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <iostream>
+#include <fstream>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <netdb.h>
+#include <pthread.h>
+#include <thread>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <unistd.h>
 using namespace std;
 
 class DefaultIO{
@@ -23,7 +38,36 @@ public:
 
 	// you may add additional methods here
 };
-
+class socketIO:public DefaultIO{
+private:
+int ClientId;
+public:
+	socketIO(int Clientid):DefaultIO() {
+		ClientId = Clientid;
+	}
+	virtual string read(){
+		string clientInput="";
+		char c=0;
+		::read(ClientId,&c,sizeof(char));
+		while(c!='\n'){				
+			clientInput+=c;
+			::read(ClientId,&c,sizeof(char));
+		}
+		return clientInput;
+	}
+	virtual void write(string text) {
+		send(ClientId, &text, text.size(), 0);
+	}
+	virtual void write(float f){
+		send(ClientId, &f, sizeof(f), 0);
+	}
+	virtual void read(float* f){
+		char buffer[1024];
+		int n = recv(ClientId, buffer,100,0);
+		stringstream s(buffer);
+		s >> *f;
+	}
+};
 // you may add here helper classes
 class Arg{
 public:
