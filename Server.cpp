@@ -1,3 +1,4 @@
+// Gal Yehezkel, ID: 315786228
 
 #include "Server.h"
 
@@ -12,27 +13,32 @@ Server::Server(int port)throw (const char*) {
 		throw "bind failure";
 	if(listen(fd,3)<0)
 		throw "listen failure";
+	flag = true;
 	
 }
 
 void Server::start(ClientHandler& ch)throw(const char*){
 	t = new thread([&ch, this](){
-		cout << "waiting for a client." <<endl;
-		socklen_t clientSize = sizeof(client);
-		int aClient = accept(fd, (struct sockaddr*) &client, &clientSize);
-		if(aClient<0)
-			throw "accept failure";
-		cout << "client connected."<<endl;
-		ch.handle(aClient);
-		close(aClient);
-	//	close(fd); //not.
+		while(flag) {
+			cout << "waiting for a client." <<endl;
+			socklen_t clientSize = sizeof(client);
+			alarm(5);
+			int aClient = accept(fd, (struct sockaddr*) &client, &clientSize);
+			if(aClient<0)
+				throw "accept failure";
+			cout << "client connected."<<endl;
+			ch.handle(aClient);
+		}
+		close(fd);
 	});	
 }
 
 void Server::stop(){
+	flag = false;
 	t->join(); // do not delete this!
 }
 
 Server::~Server() {
+	delete t;
 }
 

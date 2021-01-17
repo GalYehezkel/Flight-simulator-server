@@ -9,12 +9,7 @@
 #include <fstream>
 #include <vector>
 #include "HybridAnomalyDetector.h"
-#include <sys/types.h>
-#include <sys/socket.h>
-#include <netinet/in.h>
-#include <netdb.h>
 #include <unistd.h>
-#include <iostream>
 #include <fstream>
 #include <sys/types.h>
 #include <sys/socket.h>
@@ -24,8 +19,6 @@
 #include <thread>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#include <unistd.h>
 using namespace std;
 
 class DefaultIO{
@@ -56,15 +49,22 @@ public:
 		return clientInput;
 	}
 	virtual void write(string text) {
-		send(ClientId, &text, text.size(), 0);
+		::write(ClientId, text.c_str(), text.length());
 	}
 	virtual void write(float f){
-		send(ClientId, &f, sizeof(f), 0);
+		std::ostringstream s;
+		s << f;
+		::write(ClientId, s.str().c_str(), s.str().length());
 	}
 	virtual void read(float* f){
-		char buffer[1024];
-		int n = recv(ClientId, buffer,100,0);
-		stringstream s(buffer);
+		string clientInput="";
+		char c=0;
+		::read(ClientId,&c,sizeof(char));
+		while(c!='\n'){				
+			clientInput+=c;
+			::read(ClientId,&c,sizeof(char));
+		}
+		stringstream s(clientInput);
 		s >> *f;
 	}
 };

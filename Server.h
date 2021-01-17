@@ -1,3 +1,5 @@
+// Gal Yehezkel, ID: 315786228
+
 /*
  * Server.h
  *
@@ -36,10 +38,11 @@ class ClientHandler{
 class AnomalyDetectionHandler:public ClientHandler{
 	public:
     virtual void handle(int clientID){
-		socketIO s(clientID);
-		CLI c(&s);
-		c.start();
-		c.~CLI();
+		socketIO* s = new socketIO(clientID);
+		CLI* c= new CLI(s);
+		c->start();
+		delete c;
+		delete s;
     }
 };
 
@@ -48,6 +51,7 @@ class AnomalyDetectionHandler:public ClientHandler{
 class Server {
 	thread* t; // the thread to run the start() method in
 	int fd;
+	bool flag;
 	sockaddr_in server;
 	sockaddr_in client;
 	// you may add data members

@@ -16,6 +16,10 @@ timeseries.h
 math.h
 /mnt/c/Users/Gal/Desktop/even2/even2/math.h
 
+/mnt/c/Users/Gal/Desktop/even2/even2/CLI.cpp
+CLI.h
+/mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
+
 /mnt/c/Users/Gal/Desktop/even2/even2/CLI.h
 string.h
 -
@@ -111,17 +115,7 @@ vector
 -
 HybridAnomalyDetector.h
 /mnt/c/Users/Gal/Desktop/even2/even2/HybridAnomalyDetector.h
-sys/types.h
--
-sys/socket.h
--
-netinet/in.h
--
-netdb.h
--
 unistd.h
--
-iostream
 -
 fstream
 -
@@ -140,10 +134,6 @@ thread
 stdio.h
 -
 stdlib.h
--
-string.h
--
-unistd.h
 -
 
 /mnt/c/Users/Gal/Desktop/even2/even2/minCircle.h
